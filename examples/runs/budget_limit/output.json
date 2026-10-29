@@ -1,0 +1,115 @@
+{
+  "mode": "mock",
+  "status": "incomplete",
+  "title": "让字幕进入你的短视频",
+  "target_duration_seconds": 30.0,
+  "estimated_total_seconds": 38.4,
+  "scenes": [
+    {
+      "scene_id": "S1",
+      "visual": "创作者整理拍摄笔记",
+      "voiceover": "做短视频时，你会先关注什么？先把想表达的内容写下来。画面中的文字只是文案示意。你希望观众记住哪一句话？",
+      "material_source_ids": [
+        "P01"
+      ],
+      "claims": [],
+      "pause_seconds": 1.0,
+      "duration_seconds": 13.3,
+      "rule_check": {
+        "passed": false,
+        "issues": [
+          "not_checked"
+        ]
+      }
+    },
+    {
+      "scene_id": "S2",
+      "visual": "字幕文案示意画面",
+      "voiceover": "支持字幕。一句一句整理，让思路慢慢清晰。把这一句放进你的创作笔记。回看脚本，再按自己的节奏修改。",
+      "material_source_ids": [
+        "P01"
+      ],
+      "claims": [
+        {
+          "text": "支持字幕",
+          "source_id": "P01"
+        }
+      ],
+      "pause_seconds": 0.0,
+      "duration_seconds": 11.3,
+      "rule_check": {
+        "passed": false,
+        "issues": [
+          "not_checked"
+        ]
+      }
+    },
+    {
+      "scene_id": "S3",
+      "visual": "创作者回看脚本并记录修改",
+      "voiceover": "功能以实际版本为准。今天从字幕这个小主题开始。停下来，看看这段表达是否适合你的受众。准备好后，就开始记录你的想法吧。",
+      "material_source_ids": [
+        "P01"
+      ],
+      "claims": [],
+      "pause_seconds": 0.0,
+      "duration_seconds": 13.8,
+      "rule_check": {
+        "passed": false,
+        "issues": [
+          "not_checked"
+        ]
+      }
+    }
+  ],
+  "risks": [
+    "max_graph_steps reached",
+    "duration_out_of_range"
+  ],
+  "checks": {
+    "duration_passed": false,
+    "brand_rules_passed": false
+  },
+  "check_details": {
+    "duration": {
+      "passed": false,
+      "estimated_total_seconds": 38.4,
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "speech_units": 46,
+          "duration_seconds": 13.3
+        },
+        {
+          "scene_id": "S2",
+          "speech_units": 42,
+          "duration_seconds": 11.3
+        },
+        {
+          "scene_id": "S3",
+          "speech_units": 52,
+          "duration_seconds": 13.8
+        }
+      ],
+      "accepted_range_seconds": [
+        27.0,
+        30.0
+      ],
+      "characters_per_second": 4.0,
+      "scene_overhead_seconds": 0.8,
+      "method": "CJK characters + Latin words ; punctuation excluded ; rounded per scene"
+    },
+    "rules": null
+  },
+  "requested_fields": [],
+  "pending_items": [
+    "passed_duration_check",
+    "passed_rule_check"
+  ],
+  "stop_reason": "max_graph_steps reached",
+  "usage": {
+    "graph_steps": 3,
+    "tool_calls": 2
+  },
+  "trace_path": "trace.json"
+}

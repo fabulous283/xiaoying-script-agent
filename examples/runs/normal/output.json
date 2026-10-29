@@ -1,0 +1,127 @@
+{
+  "mode": "mock",
+  "status": "completed",
+  "title": "让字幕进入你的短视频",
+  "target_duration_seconds": 30.0,
+  "estimated_total_seconds": 30.0,
+  "scenes": [
+    {
+      "scene_id": "S1",
+      "visual": "创作者整理拍摄笔记",
+      "voiceover": "做短视频时，你会先关注什么？先把想表达的内容写下来。画面中的文字只是文案示意。",
+      "material_source_ids": [
+        "P01"
+      ],
+      "claims": [],
+      "pause_seconds": 2.1,
+      "duration_seconds": 11.65,
+      "rule_check": {
+        "scene_id": "S1",
+        "passed": true,
+        "issues": []
+      }
+    },
+    {
+      "scene_id": "S2",
+      "visual": "字幕文案示意画面",
+      "voiceover": "支持字幕。一句一句整理，让思路慢慢清晰。把这一句放进你的创作笔记。",
+      "material_source_ids": [
+        "P01"
+      ],
+      "claims": [
+        {
+          "text": "支持字幕",
+          "source_id": "P01"
+        }
+      ],
+      "pause_seconds": 0.0,
+      "duration_seconds": 8.05,
+      "rule_check": {
+        "scene_id": "S2",
+        "passed": true,
+        "issues": []
+      }
+    },
+    {
+      "scene_id": "S3",
+      "visual": "创作者回看脚本并记录修改",
+      "voiceover": "功能以实际版本为准。今天从字幕这个小主题开始。停下来，看看这段表达是否适合你的受众。",
+      "material_source_ids": [
+        "P01"
+      ],
+      "claims": [],
+      "pause_seconds": 0.0,
+      "duration_seconds": 10.3,
+      "rule_check": {
+        "scene_id": "S3",
+        "passed": true,
+        "issues": []
+      }
+    }
+  ],
+  "risks": [],
+  "checks": {
+    "duration_passed": true,
+    "brand_rules_passed": true
+  },
+  "check_details": {
+    "duration": {
+      "passed": true,
+      "estimated_total_seconds": 30.0,
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "speech_units": 35,
+          "duration_seconds": 11.65
+        },
+        {
+          "scene_id": "S2",
+          "speech_units": 29,
+          "duration_seconds": 8.05
+        },
+        {
+          "scene_id": "S3",
+          "speech_units": 38,
+          "duration_seconds": 10.3
+        }
+      ],
+      "accepted_range_seconds": [
+        27.0,
+        30.0
+      ],
+      "characters_per_second": 4.0,
+      "scene_overhead_seconds": 0.8,
+      "method": "CJK characters + Latin words ; punctuation excluded ; rounded per scene"
+    },
+    "rules": {
+      "passed": true,
+      "issues": [],
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "passed": true,
+          "issues": []
+        },
+        {
+          "scene_id": "S2",
+          "passed": true,
+          "issues": []
+        },
+        {
+          "scene_id": "S3",
+          "passed": true,
+          "issues": []
+        }
+      ],
+      "policy": "Exact approved facts and neutral sentences ; no semantic entailment claim"
+    }
+  },
+  "requested_fields": [],
+  "pending_items": [],
+  "stop_reason": "当前稿件的时长和规则检查均通过。",
+  "usage": {
+    "graph_steps": 7,
+    "tool_calls": 4
+  },
+  "trace_path": "trace.json"
+}

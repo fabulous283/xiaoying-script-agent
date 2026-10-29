@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools==82.0.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xiaoying-script-agent"
+version = "0.1.0"
+description = "Auditable short-video script agent with bounded LangGraph decisions"
+requires-python = ">=3.10"
+dependencies = ["langgraph==1.1.6", "pydantic==2.12.5", "httpx==0.28.1", "python-dotenv==1.2.2"]
+
+[project.optional-dependencies]
+test = ["pytest==9.0.3"]
+
+[project.scripts]
+script-agent = "script_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

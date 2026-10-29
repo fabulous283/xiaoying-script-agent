@@ -1,0 +1,76 @@
+{
+  "run_id": "8a389d32-dc28-43c2-8d18-dd982652c12f",
+  "mode": "mock",
+  "model": "offline-observation-fixture-v1",
+  "started_at": "2026-10-29T04:02:07.407212+00:00",
+  "config": {
+    "max_graph_steps": 12,
+    "max_tool_calls": 8,
+    "characters_per_second": 4.0,
+    "scene_overhead_seconds": 0.8,
+    "duration_tolerance": 0.1
+  },
+  "steps": [
+    {
+      "step": 1,
+      "time": "2026-10-29T04:02:07.410211+00:00",
+      "observed_step": null,
+      "decision": {
+        "reason": "关键输入缺失，无法生成完整脚本。",
+        "action": "request_input",
+        "fields": [
+          "audience"
+        ]
+      },
+      "observation": {
+        "ok": true,
+        "tool": "request_input",
+        "result": {
+          "requested_fields": [
+            "audience"
+          ]
+        }
+      },
+      "elapsed_ms": 0.05,
+      "status_after_step": "needs_input",
+      "next_action": null
+    }
+  ],
+  "finished_at": "2026-10-29T04:02:07.410211+00:00",
+  "status": "needs_input",
+  "final_output": {
+    "mode": "mock",
+    "status": "needs_input",
+    "title": "",
+    "target_duration_seconds": 30.0,
+    "estimated_total_seconds": null,
+    "scenes": [],
+    "risks": [
+      "关键输入缺失，无法生成完整脚本。"
+    ],
+    "checks": {
+      "duration_passed": false,
+      "brand_rules_passed": false
+    },
+    "check_details": {
+      "duration": null,
+      "rules": null
+    },
+    "requested_fields": [
+      "audience"
+    ],
+    "pending_items": [
+      "audience",
+      "retrieved_materials",
+      "script",
+      "passed_duration_check",
+      "passed_rule_check"
+    ],
+    "stop_reason": "关键输入缺失，无法生成完整脚本。",
+    "usage": {
+      "graph_steps": 1,
+      "tool_calls": 0
+    },
+    "trace_path": "trace.json"
+  }
+}

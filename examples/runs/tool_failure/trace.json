@@ -1,0 +1,91 @@
+{
+  "run_id": "a8f2664e-b99e-4c09-acc6-b76fe1c0cca2",
+  "mode": "mock",
+  "model": "offline-observation-fixture-v1",
+  "started_at": "2026-10-29T04:02:07.419031+00:00",
+  "config": {
+    "max_graph_steps": 12,
+    "max_tool_calls": 8,
+    "characters_per_second": 4.0,
+    "scene_overhead_seconds": 0.8,
+    "duration_tolerance": 0.1
+  },
+  "steps": [
+    {
+      "step": 1,
+      "time": "2026-10-29T04:02:07.422032+00:00",
+      "observed_step": null,
+      "decision": {
+        "reason": "检索主题相关的产品事实。",
+        "action": "search_materials",
+        "query": "小影短视频字幕"
+      },
+      "observation": {
+        "ok": false,
+        "tool": "search_materials",
+        "error": "action_error : RuntimeError"
+      },
+      "tool_arguments": {
+        "query": "小影短视频字幕"
+      },
+      "elapsed_ms": 0.06,
+      "status_after_step": "running",
+      "next_action": "finish"
+    },
+    {
+      "step": 2,
+      "time": "2026-10-29T04:02:07.423032+00:00",
+      "observed_step": 1,
+      "decision": {
+        "reason": "上一动作失败，离线演示终止并保留错误。",
+        "action": "finish",
+        "status": "failed"
+      },
+      "observation": {
+        "ok": true,
+        "tool": "finish",
+        "result": {
+          "status": "failed"
+        }
+      },
+      "elapsed_ms": 0.05,
+      "status_after_step": "failed",
+      "next_action": null
+    }
+  ],
+  "finished_at": "2026-10-29T04:02:07.423032+00:00",
+  "status": "failed",
+  "final_output": {
+    "mode": "mock",
+    "status": "failed",
+    "title": "",
+    "target_duration_seconds": 30.0,
+    "estimated_total_seconds": null,
+    "scenes": [],
+    "risks": [
+      "action_error : RuntimeError",
+      "上一动作失败，离线演示终止并保留错误。"
+    ],
+    "checks": {
+      "duration_passed": false,
+      "brand_rules_passed": false
+    },
+    "check_details": {
+      "duration": null,
+      "rules": null
+    },
+    "requested_fields": [],
+    "pending_items": [
+      "retrieved_materials",
+      "script",
+      "passed_duration_check",
+      "passed_rule_check"
+    ],
+    "stop_reason": "上一动作失败，离线演示终止并保留错误。",
+    "usage": {
+      "graph_steps": 2,
+      "tool_calls": 1
+    },
+    "trace_path": "trace.json"
+  }
+}

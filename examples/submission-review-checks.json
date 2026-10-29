@@ -1,0 +1,139 @@
+{
+  "reviewed_at": "2026-10-29T04:02:13.219208+00:00",
+  "runs": [
+    {
+      "case": "budget_limit",
+      "mode": "mock",
+      "status": "incomplete",
+      "steps": 3,
+      "tool_calls": 2,
+      "verified": true,
+      "duration_policy": "target_hard_cap",
+      "completed_within_current_hard_cap": null
+    },
+    {
+      "case": "missing_info",
+      "mode": "mock",
+      "status": "needs_input",
+      "steps": 1,
+      "tool_calls": 0,
+      "verified": true,
+      "duration_policy": "target_hard_cap",
+      "completed_within_current_hard_cap": null
+    },
+    {
+      "case": "no_materials",
+      "mode": "mock",
+      "status": "needs_input",
+      "steps": 2,
+      "tool_calls": 1,
+      "verified": true,
+      "duration_policy": "target_hard_cap",
+      "completed_within_current_hard_cap": null
+    },
+    {
+      "case": "normal",
+      "mode": "mock",
+      "status": "completed",
+      "steps": 7,
+      "tool_calls": 4,
+      "verified": true,
+      "duration_policy": "target_hard_cap",
+      "completed_within_current_hard_cap": true
+    },
+    {
+      "case": "real-no-materials",
+      "mode": "real_model",
+      "status": "needs_input",
+      "steps": 3,
+      "tool_calls": 2,
+      "verified": true,
+      "duration_policy": "legacy_symmetric_tolerance",
+      "completed_within_current_hard_cap": null
+    },
+    {
+      "case": "real-normal-hard-cap",
+      "mode": "real_model",
+      "status": "completed",
+      "steps": 9,
+      "tool_calls": 5,
+      "verified": true,
+      "duration_policy": "target_hard_cap",
+      "completed_within_current_hard_cap": true
+    },
+    {
+      "case": "real-normal-refined",
+      "mode": "real_model",
+      "status": "completed",
+      "steps": 5,
+      "tool_calls": 3,
+      "verified": true,
+      "duration_policy": "legacy_symmetric_tolerance",
+      "completed_within_current_hard_cap": true
+    },
+    {
+      "case": "real-normal-timeout",
+      "mode": "real_model",
+      "status": "failed",
+      "steps": 2,
+      "tool_calls": 1,
+      "verified": true,
+      "duration_policy": "legacy_symmetric_tolerance",
+      "completed_within_current_hard_cap": null
+    },
+    {
+      "case": "real-normal-timeout-fix",
+      "mode": "real_model",
+      "status": "incomplete",
+      "steps": 12,
+      "tool_calls": 7,
+      "verified": true,
+      "duration_policy": "legacy_symmetric_tolerance",
+      "completed_within_current_hard_cap": null
+    },
+    {
+      "case": "real-normal-timeout-retry",
+      "mode": "real_model",
+      "status": "failed",
+      "steps": 2,
+      "tool_calls": 1,
+      "verified": true,
+      "duration_policy": "legacy_symmetric_tolerance",
+      "completed_within_current_hard_cap": null
+    },
+    {
+      "case": "real-short-hard-cap",
+      "mode": "real_model",
+      "status": "completed",
+      "steps": 5,
+      "tool_calls": 3,
+      "verified": true,
+      "duration_policy": "target_hard_cap",
+      "completed_within_current_hard_cap": true
+    },
+    {
+      "case": "real-short-refined",
+      "mode": "real_model",
+      "status": "completed",
+      "steps": 7,
+      "tool_calls": 4,
+      "verified": true,
+      "duration_policy": "legacy_symmetric_tolerance",
+      "completed_within_current_hard_cap": false
+    },
+    {
+      "case": "tool_failure",
+      "mode": "mock",
+      "status": "failed",
+      "steps": 2,
+      "tool_calls": 1,
+      "verified": true,
+      "duration_policy": "target_hard_cap",
+      "completed_within_current_hard_cap": null
+    }
+  ],
+  "replayed_tool_calls": 34,
+  "broken_local_document_links": [],
+  "exact_credential_scan": "passed",
+  "git_repository_present": true
+}

@@ -1,0 +1,11 @@
+{
+  "mode": "real_model",
+  "model": "qwen3.8-max",
+  "config": {
+    "max_graph_steps": 12,
+    "max_tool_calls": 8,
+    "characters_per_second": 4.0,
+    "scene_overhead_seconds": 0.8,
+    "duration_tolerance": 0.1
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "run_id": "3f4d3e34-f10b-43d7-8306-11c8d5fa081a",
+  "mode": "real_model",
+  "model": "qwen3.8-max",
+  "started_at": "2026-10-28T13:43:00.758973+00:00",
+  "config": {
+    "max_graph_steps": 12,
+    "max_tool_calls": 8,
+    "characters_per_second": 4.0,
+    "scene_overhead_seconds": 0.8,
+    "duration_tolerance": 0.1
+  },
+  "steps": [
+    {
+      "step": 1,
+      "time": "2026-10-28T13:43:00.765534+00:00",
+      "observed_step": null,
+      "decision": {
+        "reason": "brief完整但无已检索素材，需先检索小影短视频字幕相关素材以满足事实与引用要求。",
+        "action": "search_materials",
+        "query": "小影 短视频 字幕 功能"
+      },
+      "observation": {
+        "ok": true,
+        "tool": "search_materials",
+        "result": {
+          "materials": [
+            {
+              "id": "P01",
+              "product": "小影",
+              "keywords": [
+                "小影",
+                "字幕",
+                "短视频",
+                "视频剪辑"
+              ],
+              "facts": [
+                "支持字幕"
+              ],
+              "scope": "合成演示资料，仅支持字幕这一事实；不提供效果、价格或其他能力证据。"
+            }
+          ],
+          "count": 1
+        }
+      },
+      "tool_arguments": {
+        "query": "小影 短视频 字幕 功能"
+      },
+      "elapsed_ms": 12403.75,
+      "status_after_step": "running",
+      "next_action": null
+    },
+    {
+      "step": 2,
+      "time": "2026-10-28T13:43:13.170297+00:00",
+      "observed_step": 1,
+      "observation": {
+        "ok": false,
+        "tool": "model_decision",
+        "error": "model_error : ReadTimeout"
+      },
+      "elapsed_ms": 60076.09,
+      "status_after_step": "failed",
+      "next_action": null
+    }
+  ],
+  "finished_at": "2026-10-28T13:44:13.246948+00:00",
+  "status": "failed",
+  "final_output": {
+    "mode": "real_model",
+    "status": "failed",
+    "title": "",
+    "target_duration_seconds": 30.0,
+    "estimated_total_seconds": null,
+    "scenes": [],
+    "risks": [
+      "model_error : ReadTimeout"
+    ],
+    "checks": {
+      "duration_passed": false,
+      "brand_rules_passed": false
+    },
+    "check_details": {
+      "duration": null,
+      "rules": null
+    },
+    "requested_fields": [],
+    "pending_items": [
+      "script",
+      "passed_duration_check",
+      "passed_rule_check"
+    ],
+    "stop_reason": "model_error : ReadTimeout",
+    "usage": {
+      "graph_steps": 2,
+      "tool_calls": 1
+    },
+    "trace_path": "trace.json"
+  }
+}

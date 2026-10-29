@@ -1,0 +1,31 @@
+{
+  "mode": "real_model",
+  "status": "failed",
+  "title": "",
+  "target_duration_seconds": 30.0,
+  "estimated_total_seconds": null,
+  "scenes": [],
+  "risks": [
+    "model_error : ReadTimeout"
+  ],
+  "checks": {
+    "duration_passed": false,
+    "brand_rules_passed": false
+  },
+  "check_details": {
+    "duration": null,
+    "rules": null
+  },
+  "requested_fields": [],
+  "pending_items": [
+    "script",
+    "passed_duration_check",
+    "passed_rule_check"
+  ],
+  "stop_reason": "model_error : ReadTimeout",
+  "usage": {
+    "graph_steps": 2,
+    "tool_calls": 1
+  },
+  "trace_path": "trace.json"
+}

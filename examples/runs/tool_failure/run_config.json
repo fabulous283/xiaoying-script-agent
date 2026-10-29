@@ -1,0 +1,12 @@
+{
+  "mode": "mock",
+  "fail_tool": "search_materials",
+  "duration_policy": "target_hard_cap",
+  "config": {
+    "max_graph_steps": 12,
+    "max_tool_calls": 8,
+    "characters_per_second": 4.0,
+    "scene_overhead_seconds": 0.8,
+    "duration_tolerance": 0.1
+  }
+}

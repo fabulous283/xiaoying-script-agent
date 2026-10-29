@@ -1,0 +1,153 @@
+{
+  "mode": "real_model",
+  "status": "completed",
+  "title": "让字幕进入你的短视频",
+  "target_duration_seconds": 30.0,
+  "estimated_total_seconds": 27.2,
+  "scenes": [
+    {
+      "scene_id": "S1",
+      "visual": "创作者整理拍摄笔记",
+      "voiceover": "做短视频时，你会先关注什么？",
+      "material_source_ids": [
+        "P01"
+      ],
+      "claims": [],
+      "pause_seconds": 2.5,
+      "duration_seconds": 6.3,
+      "rule_check": {
+        "scene_id": "S1",
+        "passed": true,
+        "issues": []
+      }
+    },
+    {
+      "scene_id": "S2",
+      "visual": "字幕文案示意画面",
+      "voiceover": "支持字幕。今天从字幕这个小主题开始。",
+      "material_source_ids": [
+        "P01"
+      ],
+      "claims": [
+        {
+          "text": "支持字幕",
+          "source_id": "P01"
+        }
+      ],
+      "pause_seconds": 2.0,
+      "duration_seconds": 6.8,
+      "rule_check": {
+        "scene_id": "S2",
+        "passed": true,
+        "issues": []
+      }
+    },
+    {
+      "scene_id": "S3",
+      "visual": "创作者回看脚本并记录修改",
+      "voiceover": "你希望观众记住哪一句话？",
+      "material_source_ids": [
+        "P01"
+      ],
+      "claims": [],
+      "pause_seconds": 2.0,
+      "duration_seconds": 5.55,
+      "rule_check": {
+        "scene_id": "S3",
+        "passed": true,
+        "issues": []
+      }
+    },
+    {
+      "scene_id": "S4",
+      "visual": "创作者整理拍摄笔记",
+      "voiceover": "准备好后，就开始记录你的想法吧。功能以实际版本为准。",
+      "material_source_ids": [
+        "P01"
+      ],
+      "claims": [],
+      "pause_seconds": 2.0,
+      "duration_seconds": 8.55,
+      "rule_check": {
+        "scene_id": "S4",
+        "passed": true,
+        "issues": []
+      }
+    }
+  ],
+  "risks": [],
+  "checks": {
+    "duration_passed": true,
+    "brand_rules_passed": true
+  },
+  "check_details": {
+    "duration": {
+      "passed": true,
+      "estimated_total_seconds": 27.2,
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "speech_units": 12,
+          "duration_seconds": 6.3
+        },
+        {
+          "scene_id": "S2",
+          "speech_units": 16,
+          "duration_seconds": 6.8
+        },
+        {
+          "scene_id": "S3",
+          "speech_units": 11,
+          "duration_seconds": 5.55
+        },
+        {
+          "scene_id": "S4",
+          "speech_units": 23,
+          "duration_seconds": 8.55
+        }
+      ],
+      "accepted_range_seconds": [
+        27.0,
+        30.0
+      ],
+      "characters_per_second": 4.0,
+      "scene_overhead_seconds": 0.8,
+      "method": "CJK characters + Latin words ; punctuation excluded ; rounded per scene"
+    },
+    "rules": {
+      "passed": true,
+      "issues": [],
+      "scenes": [
+        {
+          "scene_id": "S1",
+          "passed": true,
+          "issues": []
+        },
+        {
+          "scene_id": "S2",
+          "passed": true,
+          "issues": []
+        },
+        {
+          "scene_id": "S3",
+          "passed": true,
+          "issues": []
+        },
+        {
+          "scene_id": "S4",
+          "passed": true,
+          "issues": []
+        }
+      ],
+      "policy": "Exact approved facts and neutral sentences ; no semantic entailment claim"
+    }
+  },
+  "requested_fields": [],
+  "pending_items": [],
+  "stop_reason": "时长检查通过(27.2秒在27-30区间)且规则检查通过(无issues)，稿件合规，可完成。",
+  "usage": {
+    "graph_steps": 9,
+    "tool_calls": 5
+  },
+  "trace_path": "trace.json"
+}

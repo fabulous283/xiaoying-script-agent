@@ -1,0 +1,644 @@
+{
+  "run_id": "764254b6-cc92-4c7e-9cdd-5f6acc02cc29",
+  "mode": "mock",
+  "model": "offline-observation-fixture-v1",
+  "started_at": "2026-10-29T04:02:07.390667+00:00",
+  "config": {
+    "max_graph_steps": 12,
+    "max_tool_calls": 8,
+    "characters_per_second": 4.0,
+    "scene_overhead_seconds": 0.8,
+    "duration_tolerance": 0.1
+  },
+  "steps": [
+    {
+      "step": 1,
+      "time": "2026-10-29T04:02:07.397228+00:00",
+      "observed_step": null,
+      "decision": {
+        "reason": "检索主题相关的产品事实。",
+        "action": "search_materials",
+        "query": "小影短视频字幕"
+      },
+      "observation": {
+        "ok": true,
+        "tool": "search_materials",
+        "result": {
+          "materials": [
+            {
+              "id": "P01",
+              "product": "小影",
+              "keywords": [
+                "小影",
+                "字幕",
+                "短视频",
+                "视频剪辑"
+              ],
+              "facts": [
+                "支持字幕"
+              ],
+              "scope": "合成演示资料，仅支持字幕这一事实；不提供效果、价格或其他能力证据。"
+            }
+          ],
+          "count": 1
+        }
+      },
+      "tool_arguments": {
+        "query": "小影短视频字幕"
+      },
+      "elapsed_ms": 0.24,
+      "status_after_step": "running",
+      "next_action": "save_script"
+    },
+    {
+      "step": 2,
+      "time": "2026-10-29T04:02:07.398211+00:00",
+      "observed_step": 1,
+      "decision": {
+        "reason": "使用已检索事实建立首稿，演示后续时长检查。",
+        "action": "save_script",
+        "script": {
+          "title": "让字幕进入你的短视频",
+          "scenes": [
+            {
+              "scene_id": "S1",
+              "visual": "创作者整理拍摄笔记",
+              "voiceover": "做短视频时，你会先关注什么？先把想表达的内容写下来。画面中的文字只是文案示意。你希望观众记住哪一句话？",
+              "material_source_ids": [
+                "P01"
+              ],
+              "claims": [],
+              "pause_seconds": 1.0
+            },
+            {
+              "scene_id": "S2",
+              "visual": "字幕文案示意画面",
+              "voiceover": "支持字幕。一句一句整理，让思路慢慢清晰。把这一句放进你的创作笔记。回看脚本，再按自己的节奏修改。",
+              "material_source_ids": [
+                "P01"
+              ],
+              "claims": [
+                {
+                  "text": "支持字幕",
+                  "source_id": "P01"
+                }
+              ],
+              "pause_seconds": 0.0
+            },
+            {
+              "scene_id": "S3",
+              "visual": "创作者回看脚本并记录修改",
+              "voiceover": "功能以实际版本为准。今天从字幕这个小主题开始。停下来，看看这段表达是否适合你的受众。准备好后，就开始记录你的想法吧。",
+              "material_source_ids": [
+                "P01"
+              ],
+              "claims": [],
+              "pause_seconds": 0.0
+            }
+          ]
+        }
+      },
+      "observation": {
+        "ok": true,
+        "tool": "save_script",
+        "result": {
+          "revision": 1,
+          "checks_invalidated": true
+        }
+      },
+      "elapsed_ms": 1.4,
+      "status_after_step": "running",
+      "next_action": "estimate_duration"
+    },
+    {
+      "step": 3,
+      "time": "2026-10-29T04:02:07.400218+00:00",
+      "observed_step": 2,
+      "decision": {
+        "reason": "当前稿件尚无时长检查。",
+        "action": "estimate_duration"
+      },
+      "observation": {
+        "ok": true,
+        "tool": "estimate_duration",
+        "result": {
+          "passed": false,
+          "estimated_total_seconds": 38.4,
+          "scenes": [
+            {
+              "scene_id": "S1",
+              "speech_units": 46,
+              "duration_seconds": 13.3
+            },
+            {
+              "scene_id": "S2",
+              "speech_units": 42,
+              "duration_seconds": 11.3
+            },
+            {
+              "scene_id": "S3",
+              "speech_units": 52,
+              "duration_seconds": 13.8
+            }
+          ],
+          "accepted_range_seconds": [
+            27.0,
+            30.0
+          ],
+          "characters_per_second": 4.0,
+          "scene_overhead_seconds": 0.8,
+          "method": "CJK characters + Latin words ; punctuation excluded ; rounded per scene"
+        }
+      },
+      "tool_arguments": {
+        "script": {
+          "title": "让字幕进入你的短视频",
+          "scenes": [
+            {
+              "scene_id": "S1",
+              "visual": "创作者整理拍摄笔记",
+              "voiceover": "做短视频时，你会先关注什么？先把想表达的内容写下来。画面中的文字只是文案示意。你希望观众记住哪一句话？",
+              "material_source_ids": [
+                "P01"
+              ],
+              "claims": [],
+              "pause_seconds": 1.0
+            },
+            {
+              "scene_id": "S2",
+              "visual": "字幕文案示意画面",
+              "voiceover": "支持字幕。一句一句整理，让思路慢慢清晰。把这一句放进你的创作笔记。回看脚本，再按自己的节奏修改。",
+              "material_source_ids": [
+                "P01"
+              ],
+              "claims": [
+                {
+                  "text": "支持字幕",
+                  "source_id": "P01"
+                }
+              ],
+              "pause_seconds": 0.0
+            },
+            {
+              "scene_id": "S3",
+              "visual": "创作者回看脚本并记录修改",
+              "voiceover": "功能以实际版本为准。今天从字幕这个小主题开始。停下来，看看这段表达是否适合你的受众。准备好后，就开始记录你的想法吧。",
+              "material_source_ids": [
+                "P01"
+              ],
+              "claims": [],
+              "pause_seconds": 0.0
+            }
+          ]
+        },
+        "revision": 1,
+        "target_duration_seconds": 30.0,
+        "config": {
+          "max_graph_steps": 12,
+          "max_tool_calls": 8,
+          "characters_per_second": 4.0,
+          "scene_overhead_seconds": 0.8,
+          "duration_tolerance": 0.1
+        }
+      },
+      "elapsed_ms": 0.25,
+      "status_after_step": "running",
+      "next_action": "save_script"
+    },
+    {
+      "step": 4,
+      "time": "2026-10-29T04:02:07.401212+00:00",
+      "observed_step": 3,
+      "decision": {
+        "reason": "实测时长超出容差，调整旁白并重新检查。",
+        "action": "save_script",
+        "script": {
+          "title": "让字幕进入你的短视频",
+          "scenes": [
+            {
+              "scene_id": "S1",
+              "visual": "创作者整理拍摄笔记",
+              "voiceover": "做短视频时，你会先关注什么？先把想表达的内容写下来。画面中的文字只是文案示意。",
+              "material_source_ids": [
+                "P01"
+              ],
+              "claims": [],
+              "pause_seconds": 2.1
+            },
+            {
+              "scene_id": "S2",
+              "visual": "字幕文案示意画面",
+              "voiceover": "支持字幕。一句一句整理，让思路慢慢清晰。把这一句放进你的创作笔记。",
+              "material_source_ids": [
+                "P01"
+              ],
+              "claims": [
+                {
+                  "text": "支持字幕",
+                  "source_id": "P01"
+                }
+              ],
+              "pause_seconds": 0.0
+            },
+            {
+              "scene_id": "S3",
+              "visual": "创作者回看脚本并记录修改",
+              "voiceover": "功能以实际版本为准。今天从字幕这个小主题开始。停下来，看看这段表达是否适合你的受众。",
+              "material_source_ids": [
+                "P01"
+              ],
+              "claims": [],
+              "pause_seconds": 0.0
+            }
+          ]
+        }
+      },
+      "observation": {
+        "ok": true,
+        "tool": "save_script",
+        "result": {
+          "revision": 2,
+          "checks_invalidated": true
+        }
+      },
+      "elapsed_ms": 0.61,
+      "status_after_step": "running",
+      "next_action": "estimate_duration"
+    },
+    {
+      "step": 5,
+      "time": "2026-10-29T04:02:07.402225+00:00",
+      "observed_step": 4,
+      "decision": {
+        "reason": "当前稿件尚无时长检查。",
+        "action": "estimate_duration"
+      },
+      "observation": {
+        "ok": true,
+        "tool": "estimate_duration",
+        "result": {
+          "passed": true,
+          "estimated_total_seconds": 30.0,
+          "scenes": [
+            {
+              "scene_id": "S1",
+              "speech_units": 35,
+              "duration_seconds": 11.65
+            },
+            {
+              "scene_id": "S2",
+              "speech_units": 29,
+              "duration_seconds": 8.05
+            },
+            {
+              "scene_id": "S3",
+              "speech_units": 38,
+              "duration_seconds": 10.3
+            }
+          ],
+          "accepted_range_seconds": [
+            27.0,
+            30.0
+          ],
+          "characters_per_second": 4.0,
+          "scene_overhead_seconds": 0.8,
+          "method": "CJK characters + Latin words ; punctuation excluded ; rounded per scene"
+        }
+      },
+      "tool_arguments": {
+        "script": {
+          "title": "让字幕进入你的短视频",
+          "scenes": [
+            {
+              "scene_id": "S1",
+              "visual": "创作者整理拍摄笔记",
+              "voiceover": "做短视频时，你会先关注什么？先把想表达的内容写下来。画面中的文字只是文案示意。",
+              "material_source_ids": [
+                "P01"
+              ],
+              "claims": [],
+              "pause_seconds": 2.1
+            },
+            {
+              "scene_id": "S2",
+              "visual": "字幕文案示意画面",
+              "voiceover": "支持字幕。一句一句整理，让思路慢慢清晰。把这一句放进你的创作笔记。",
+              "material_source_ids": [
+                "P01"
+              ],
+              "claims": [
+                {
+                  "text": "支持字幕",
+                  "source_id": "P01"
+                }
+              ],
+              "pause_seconds": 0.0
+            },
+            {
+              "scene_id": "S3",
+              "visual": "创作者回看脚本并记录修改",
+              "voiceover": "功能以实际版本为准。今天从字幕这个小主题开始。停下来，看看这段表达是否适合你的受众。",
+              "material_source_ids": [
+                "P01"
+              ],
+              "claims": [],
+              "pause_seconds": 0.0
+            }
+          ]
+        },
+        "revision": 2,
+        "target_duration_seconds": 30.0,
+        "config": {
+          "max_graph_steps": 12,
+          "max_tool_calls": 8,
+          "characters_per_second": 4.0,
+          "scene_overhead_seconds": 0.8,
+          "duration_tolerance": 0.1
+        }
+      },
+      "elapsed_ms": 0.21,
+      "status_after_step": "running",
+      "next_action": "check_script"
+    },
+    {
+      "step": 6,
+      "time": "2026-10-29T04:02:07.402225+00:00",
+      "observed_step": 5,
+      "decision": {
+        "reason": "时长已通过，检查事实引用和品牌规则。",
+        "action": "check_script"
+      },
+      "observation": {
+        "ok": true,
+        "tool": "check_script",
+        "result": {
+          "passed": true,
+          "issues": [],
+          "scenes": [
+            {
+              "scene_id": "S1",
+              "passed": true,
+              "issues": []
+            },
+            {
+              "scene_id": "S2",
+              "passed": true,
+              "issues": []
+            },
+            {
+              "scene_id": "S3",
+              "passed": true,
+              "issues": []
+            }
+          ],
+          "policy": "Exact approved facts and neutral sentences ; no semantic entailment claim"
+        }
+      },
+      "tool_arguments": {
+        "script": {
+          "title": "让字幕进入你的短视频",
+          "scenes": [
+            {
+              "scene_id": "S1",
+              "visual": "创作者整理拍摄笔记",
+              "voiceover": "做短视频时，你会先关注什么？先把想表达的内容写下来。画面中的文字只是文案示意。",
+              "material_source_ids": [
+                "P01"
+              ],
+              "claims": [],
+              "pause_seconds": 2.1
+            },
+            {
+              "scene_id": "S2",
+              "visual": "字幕文案示意画面",
+              "voiceover": "支持字幕。一句一句整理，让思路慢慢清晰。把这一句放进你的创作笔记。",
+              "material_source_ids": [
+                "P01"
+              ],
+              "claims": [
+                {
+                  "text": "支持字幕",
+                  "source_id": "P01"
+                }
+              ],
+              "pause_seconds": 0.0
+            },
+            {
+              "scene_id": "S3",
+              "visual": "创作者回看脚本并记录修改",
+              "voiceover": "功能以实际版本为准。今天从字幕这个小主题开始。停下来，看看这段表达是否适合你的受众。",
+              "material_source_ids": [
+                "P01"
+              ],
+              "claims": [],
+              "pause_seconds": 0.0
+            }
+          ]
+        },
+        "revision": 2,
+        "materials": [
+          {
+            "id": "P01",
+            "product": "小影",
+            "keywords": [
+              "小影",
+              "字幕",
+              "短视频",
+              "视频剪辑"
+            ],
+            "facts": [
+              "支持字幕"
+            ],
+            "scope": "合成演示资料，仅支持字幕这一事实；不提供效果、价格或其他能力证据。"
+          }
+        ],
+        "rules": {
+          "synthetic": true,
+          "forbidden_expressions": [
+            "效率提升",
+            "保证",
+            "全网第一",
+            "自动生成",
+            "免费",
+            "80%"
+          ],
+          "required_disclaimer": "功能以实际版本为准。",
+          "allowed_titles": [
+            "让字幕进入你的短视频",
+            "短视频字幕创作笔记"
+          ],
+          "allowed_visuals": [
+            "创作者整理拍摄笔记",
+            "字幕文案示意画面",
+            "创作者回看脚本并记录修改"
+          ],
+          "neutral_narration": [
+            "做短视频时，你会先关注什么？",
+            "先把想表达的内容写下来。",
+            "一句一句整理，让思路慢慢清晰。",
+            "今天从字幕这个小主题开始。",
+            "画面中的文字只是文案示意。",
+            "把这一句放进你的创作笔记。",
+            "停下来，看看这段表达是否适合你的受众。",
+            "你希望观众记住哪一句话？",
+            "回看脚本，再按自己的节奏修改。",
+            "准备好后，就开始记录你的想法吧。",
+            "功能以实际版本为准。"
+          ]
+        }
+      },
+      "elapsed_ms": 0.83,
+      "status_after_step": "running",
+      "next_action": "finish"
+    },
+    {
+      "step": 7,
+      "time": "2026-10-29T04:02:07.404212+00:00",
+      "observed_step": 6,
+      "decision": {
+        "reason": "当前稿件的时长和规则检查均通过。",
+        "action": "finish",
+        "status": "completed"
+      },
+      "observation": {
+        "ok": true,
+        "tool": "finish",
+        "result": {
+          "status": "completed"
+        }
+      },
+      "elapsed_ms": 0.32,
+      "status_after_step": "completed",
+      "next_action": null
+    }
+  ],
+  "finished_at": "2026-10-29T04:02:07.404212+00:00",
+  "status": "completed",
+  "final_output": {
+    "mode": "mock",
+    "status": "completed",
+    "title": "让字幕进入你的短视频",
+    "target_duration_seconds": 30.0,
+    "estimated_total_seconds": 30.0,
+    "scenes": [
+      {
+        "scene_id": "S1",
+        "visual": "创作者整理拍摄笔记",
+        "voiceover": "做短视频时，你会先关注什么？先把想表达的内容写下来。画面中的文字只是文案示意。",
+        "material_source_ids": [
+          "P01"
+        ],
+        "claims": [],
+        "pause_seconds": 2.1,
+        "duration_seconds": 11.65,
+        "rule_check": {
+          "scene_id": "S1",
+          "passed": true,
+          "issues": []
+        }
+      },
+      {
+        "scene_id": "S2",
+        "visual": "字幕文案示意画面",
+        "voiceover": "支持字幕。一句一句整理，让思路慢慢清晰。把这一句放进你的创作笔记。",
+        "material_source_ids": [
+          "P01"
+        ],
+        "claims": [
+          {
+            "text": "支持字幕",
+            "source_id": "P01"
+          }
+        ],
+        "pause_seconds": 0.0,
+        "duration_seconds": 8.05,
+        "rule_check": {
+          "scene_id": "S2",
+          "passed": true,
+          "issues": []
+        }
+      },
+      {
+        "scene_id": "S3",
+        "visual": "创作者回看脚本并记录修改",
+        "voiceover": "功能以实际版本为准。今天从字幕这个小主题开始。停下来，看看这段表达是否适合你的受众。",
+        "material_source_ids": [
+          "P01"
+        ],
+        "claims": [],
+        "pause_seconds": 0.0,
+        "duration_seconds": 10.3,
+        "rule_check": {
+          "scene_id": "S3",
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "risks": [],
+    "checks": {
+      "duration_passed": true,
+      "brand_rules_passed": true
+    },
+    "check_details": {
+      "duration": {
+        "passed": true,
+        "estimated_total_seconds": 30.0,
+        "scenes": [
+          {
+            "scene_id": "S1",
+            "speech_units": 35,
+            "duration_seconds": 11.65
+          },
+          {
+            "scene_id": "S2",
+            "speech_units": 29,
+            "duration_seconds": 8.05
+          },
+          {
+            "scene_id": "S3",
+            "speech_units": 38,
+            "duration_seconds": 10.3
+          }
+        ],
+        "accepted_range_seconds": [
+          27.0,
+          30.0
+        ],
+        "characters_per_second": 4.0,
+        "scene_overhead_seconds": 0.8,
+        "method": "CJK characters + Latin words ; punctuation excluded ; rounded per scene"
+      },
+      "rules": {
+        "passed": true,
+        "issues": [],
+        "scenes": [
+          {
+            "scene_id": "S1",
+            "passed": true,
+            "issues": []
+          },
+          {
+            "scene_id": "S2",
+            "passed": true,
+            "issues": []
+          },
+          {
+            "scene_id": "S3",
+            "passed": true,
+            "issues": []
+          }
+        ],
+        "policy": "Exact approved facts and neutral sentences ; no semantic entailment claim"
+      }
+    },
+    "requested_fields": [],
+    "pending_items": [],
+    "stop_reason": "当前稿件的时长和规则检查均通过。",
+    "usage": {
+      "graph_steps": 7,
+      "tool_calls": 4
+    },
+    "trace_path": "trace.json"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "mode": "real_model",
+  "status": "needs_input",
+  "title": "",
+  "target_duration_seconds": 30.0,
+  "estimated_total_seconds": null,
+  "scenes": [],
+  "risks": [
+    "两次检索智能咖啡机萃取温度相关素材均为空，无法引用事实或形成含产品事实的脚本，需要补充可用素材。"
+  ],
+  "checks": {
+    "duration_passed": false,
+    "brand_rules_passed": false
+  },
+  "check_details": {
+    "duration": null,
+    "rules": null
+  },
+  "requested_fields": [
+    "materials: 智能咖啡机萃取温度相关事实来源",
+    "materials: 智能咖啡机产品能力/温度控制事实"
+  ],
+  "pending_items": [
+    "retrieved_materials",
+    "script",
+    "passed_duration_check",
+    "passed_rule_check"
+  ],
+  "stop_reason": "两次检索智能咖啡机萃取温度相关素材均为空，无法引用事实或形成含产品事实的脚本，需要补充可用素材。",
+  "usage": {
+    "graph_steps": 3,
+    "tool_calls": 2
+  },
+  "trace_path": "trace.json"
+}

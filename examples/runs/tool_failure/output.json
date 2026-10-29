@@ -1,0 +1,33 @@
+{
+  "mode": "mock",
+  "status": "failed",
+  "title": "",
+  "target_duration_seconds": 30.0,
+  "estimated_total_seconds": null,
+  "scenes": [],
+  "risks": [
+    "action_error : RuntimeError",
+    "上一动作失败，离线演示终止并保留错误。"
+  ],
+  "checks": {
+    "duration_passed": false,
+    "brand_rules_passed": false
+  },
+  "check_details": {
+    "duration": null,
+    "rules": null
+  },
+  "requested_fields": [],
+  "pending_items": [
+    "retrieved_materials",
+    "script",
+    "passed_duration_check",
+    "passed_rule_check"
+  ],
+  "stop_reason": "上一动作失败，离线演示终止并保留错误。",
+  "usage": {
+    "graph_steps": 2,
+    "tool_calls": 1
+  },
+  "trace_path": "trace.json"
+}

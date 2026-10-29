@@ -1,0 +1,35 @@
+{
+  "mode": "mock",
+  "status": "needs_input",
+  "title": "",
+  "target_duration_seconds": 30.0,
+  "estimated_total_seconds": null,
+  "scenes": [],
+  "risks": [
+    "关键输入缺失，无法生成完整脚本。"
+  ],
+  "checks": {
+    "duration_passed": false,
+    "brand_rules_passed": false
+  },
+  "check_details": {
+    "duration": null,
+    "rules": null
+  },
+  "requested_fields": [
+    "audience"
+  ],
+  "pending_items": [
+    "audience",
+    "retrieved_materials",
+    "script",
+    "passed_duration_check",
+    "passed_rule_check"
+  ],
+  "stop_reason": "关键输入缺失，无法生成完整脚本。",
+  "usage": {
+    "graph_steps": 1,
+    "tool_calls": 0
+  },
+  "trace_path": "trace.json"
+}

@@ -1,0 +1,36 @@
+{
+  "model": "qwen3.8-max",
+  "previous_runs": [
+    "examples/runs/real-normal-timeout/trace.json",
+    "examples/runs/real-normal-timeout-retry/trace.json"
+  ],
+  "current_run": "examples/runs/real-normal-timeout-fix/trace.json",
+  "request_config": {
+    "read_timeout_seconds": 180,
+    "connect_timeout_seconds": 10,
+    "write_timeout_seconds": 30,
+    "max_tokens": 4096,
+    "enable_thinking": false,
+    "compact_history": true
+  },
+  "model_calls": 12,
+  "step_elapsed_ms": [
+    1735.46,
+    5641.12,
+    1803.33,
+    5590.58,
+    1513.88,
+    6694.94,
+    2165.59,
+    2165.78,
+    6111.68,
+    1821.5,
+    5737.38,
+    2149.43
+  ],
+  "total_step_elapsed_seconds": 43.131,
+  "maximum_step_elapsed_seconds": 6.695,
+  "read_timeout_observed": false,
+  "final_status": "incomplete",
+  "limitation": "Combined changes ; no isolated A/B causal proof ; final run stopped at step budget before final rule recheck"
+}

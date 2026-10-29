@@ -1,0 +1,85 @@
+{
+  "cases": [
+    {
+      "case": "normal",
+      "status": "completed",
+      "mode": "mock",
+      "estimated_total_seconds": 30.0
+    },
+    {
+      "case": "missing_info",
+      "status": "needs_input",
+      "mode": "mock",
+      "estimated_total_seconds": null
+    },
+    {
+      "case": "no_materials",
+      "status": "needs_input",
+      "mode": "mock",
+      "estimated_total_seconds": null
+    },
+    {
+      "case": "tool_failure",
+      "status": "failed",
+      "mode": "mock",
+      "estimated_total_seconds": null
+    },
+    {
+      "case": "budget_limit",
+      "status": "incomplete",
+      "mode": "mock",
+      "estimated_total_seconds": 38.4
+    }
+  ],
+  "test_exit_code": 0,
+  "real_model_evidence": [
+    {
+      "case": "real-no-materials",
+      "status": "needs_input",
+      "model": "qwen3.8-max",
+      "trace_path": "examples/runs/real-no-materials/trace.json"
+    },
+    {
+      "case": "real-normal-hard-cap",
+      "status": "completed",
+      "model": "qwen3.8-max",
+      "trace_path": "examples/runs/real-normal-hard-cap/trace.json"
+    },
+    {
+      "case": "real-normal-refined",
+      "status": "completed",
+      "model": "qwen3.8-max",
+      "trace_path": "examples/runs/real-normal-refined/trace.json"
+    },
+    {
+      "case": "real-normal-timeout",
+      "status": "failed",
+      "model": "qwen3.8-max",
+      "trace_path": "examples/runs/real-normal-timeout/trace.json"
+    },
+    {
+      "case": "real-normal-timeout-fix",
+      "status": "incomplete",
+      "model": "qwen3.8-max",
+      "trace_path": "examples/runs/real-normal-timeout-fix/trace.json"
+    },
+    {
+      "case": "real-normal-timeout-retry",
+      "status": "failed",
+      "model": "qwen3.8-max",
+      "trace_path": "examples/runs/real-normal-timeout-retry/trace.json"
+    },
+    {
+      "case": "real-short-hard-cap",
+      "status": "completed",
+      "model": "qwen3.8-max",
+      "trace_path": "examples/runs/real-short-hard-cap/trace.json"
+    },
+    {
+      "case": "real-short-refined",
+      "status": "completed",
+      "model": "qwen3.8-max",
+      "trace_path": "examples/runs/real-short-refined/trace.json"
+    }
+  ]
+}
